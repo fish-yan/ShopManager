@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>车杰盟店长App</title>
+    <link href="wap.css" rel="stylesheet">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="highcharts.js"></script>
+    <script type="text/javascript" src="wap.js"></script>
+</head>
+
+<body>
+    <div class="graphics" id="graphics"></div>
+
+
+    <script>
+$(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+            var clientWidth = docEl.clientWidth;
+            if (!clientWidth) return;
+            docEl.style.fontSize = 20 * (clientWidth / 320).toFixed(2) + 'px';
+        };
+
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+});
+
+var myLineCategories = [];
+var myLineDate = [];
+var todayDate = '0';
+var j = 0;
+var lineChart;
+
+function Item(id, val) {
+    this.id = id;
+    this.val = val;
+}
+
+function testData() {
+    var list = new Array();
+    list[0] = new Item(1, 0);
+    list[1] = new Item(2, 0);
+    list[2] = new Item(3, 0);
+    list[3] = new Item(4, 0);
+    list[4] = new Item(5, 0);
+    list[5] = new Item(6, 0);
+    list[6] = new Item(7, 0);
+    list[7] = new Item(8, 0);
+    list[8] = new Item(9, 0);
+    list[9] = new Item(10, 0);
+    list[10] = new Item(11, 0);
+    list[11] = new Item(12, 0);
+    list[12] = new Item(13, 0);
+    list[13] = new Item(14, 0);
+    list[14] = new Item(15, 0);
+    list[15] = new Item(16, 0);
+    list[16] = new Item(17, 0);
+    list[17] = new Item(18, 0);
+    list[18] = new Item(19, 0);
+    list[19] = new Item(20, 0);
+    list[20] = new Item(21, 0);
+    list[21] = new Item(22, 0);
+    list[22] = new Item(23, 0);
+    list[23] = new Item(24, 0);
+    list[24] = new Item(25, 0);
+    list[25] = new Item(26, 0);
+    list[26] = new Item(27, 0);
+    list[27] = new Item(28, 0);
+    list[28] = new Item(29, 0);
+    list[29] = new Item(30, 0);
+    list[30] = new Item(31, 0);
+    setData(list, 0, '今日前台营业额（元）', '元');
+}
+
+
+function myfun() {
+    
+    //构建数据区域
+    lineChart = new Highcharts.Chart({
+        chart: {
+            renderTo: 'graphics'
+            , type: 'area'
+            , plotBackgroundColor: '#c93a27'
+            , margin: [0, 0, 22, 0]
+            , reflow: true
+        },
+        title: {
+            text: '',
+            style: { color: '#fff' }
+        },
+        subtitle: {
+            text: '',
+            style: { color: '#fff' }
+        },
+        xAxis: {
+            gridLineColor: '#bd2e0e',
+            gridLineWidth: 1,
+            categories: myLineCategories
+        },
+        yAxis: {
+            title: {
+                text: ''
+            },
+            labels: {
+                enabled: false
+            },
+            gridLineWidth: 0,
+        },
+        legend: {
+            enabled: false
+        },
+		plotOptions: {
+			series: {
+				cursor: 'pointer',
+				point: {
+					events: {
+						mouseOver: function () {
+							clickIndex(this.index);
+						}
+					}
+				}
+			}
+		},
+		series: [
+            {
+                name: '前台营业额',
+                data: myLineDate
+                , marker: {
+                    radius: 3,
+                    symbol: 'circle'
+                    , fillColor: "#ffbdb4"
+                }
+                , lineColor: "#ffbdb4"
+                , fillColor: "#dd4c38"
+                , lineWidth: 1
+                , tooltip: {
+                    valueSuffix: '元'
+                }
+            }]
+    })
+    //testData();
+}
+
+function clearData() {
+    var series = lineChart.series;
+    while (series.length > 0) {
+        series[0].remove(false);
+    }
+    lineChart.redraw();
+}
+
+function setData(list, title, sub, value, name) {
+    clearData();
+    var chartData = [];
+    $.each(list, function (i, item) {
+        myLineCategories[j] = item.id;
+        try {
+            chartData.push(parseFloat(item.val));
+        } catch (e) {
+            myLineDate[j] = 0;
+        }
+        j++;
+    });
+    todayDate = commafy(parseFloat(title));
+
+    lineChart.setTitle(
+        {
+            text: todayDate,
+            style: { color: '#fff' }
+        },
+        {
+            text: sub,
+            style: { color: '#fff' }
+        }
+        );
+
+    lineChart.addSeries({
+        name: name,
+        data: chartData
+        , marker: {
+            radius: 3,
+            symbol: 'circle'
+            , fillColor: "#ffbdb4"
+        }
+        , lineColor: "#ffbdb4"
+        , fillColor: "#dd4c38"
+        , lineWidth: 1
+        , tooltip: {
+            valueSuffix: value
+        }
+    }, false);
+    lineChart.redraw();
+}
+
+function commafy(num) {
+    //1.先去除空格,判断是否空值和非数
+    num = num + "";
+    num = num.replace(/[ ]/g, ""); //去除空格
+    if (num == "") {
+        return;
+    }
+    if (isNaN(num)) {
+        return;
+    }
+    //2.针对是否有小数点，分情况处理
+    var index = num.indexOf(".");
+    if (index == -1) {//无小数点
+        var reg = /(-?\d+)(\d{3})/;
+        while (reg.test(num)) {
+            num = num.replace(reg, "$1,$2");
+        }
+    } else {
+        var intPart = num.substring(0, index);
+        var pointPart = num.substring(index + 1, num.length);
+        var reg = /(-?\d+)(\d{3})/;
+        while (reg.test(intPart)) {
+            intPart = intPart.replace(reg, "$1,$2");
+        }
+        num = intPart + "." + pointPart;
+    }
+    return num;
+}
+
+window.onload = myfun;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>车杰盟店长App</title>
+<link href="wap.css" rel="stylesheet">
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="highcharts.js"></script>
+<script type="text/javascript" src="funnel.js"></script>
+<script type="text/javascript" src="wap.js"></script>
+</head>
+<body>
+
+<div class="graphics" id="graphics"></div>
+<script>
+(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+            var clientWidth = docEl.clientWidth;
+            if (!clientWidth) return;
+            docEl.style.fontSize = 20 * (clientWidth / 320).toFixed(2) + 'px';
+        };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+
+var lineChart;
+
+
+function Item(name, monthVal) {
+    this.name = name;
+    this.monthVal = monthVal;
+}
+
+function testData() {
+    var list = new Array();
+    list[0] = new Item('领养客户量', 1);
+    list[1] = new Item('基盘客户量', 6);
+    list[2] = new Item('金骏客户量', 0);
+    list[3] = new Item('流失客户量', 69339);
+    list[4] = new Item('准流失客户量', 69339);
+    list[5] = new Item('新增客户量', 30264);
+    list[6] = new Item('客户服务量', 11);
+    list[7] = new Item('微信客户量', 3);
+    setData(list);
+}
+
+
+
+function myfun() {
+    lineChart = new Highcharts.Chart({
+        chart: {
+            renderTo: 'graphics',
+            type: 'funnel'
+        },
+        title: {
+            text: ''
+        },
+        legend: {
+            enabled: false
+        },
+        series: [{
+            name: '客户分析',
+            data: [],
+            dataLabels: {
+                enabled: false
+            }
+        }]
+    });
+    //testData();
+}
+
+
+function clearData() {
+    var series = lineChart.series;
+    while (series.length > 0) {
+        series[0].remove(false);
+    }
+    lineChart.redraw();
+}
+
+function setData(list) {
+    clearData();
+    var myLineDate = [];
+    var j = 0;
+    var aa = [];
+    
+    //构建数据区域				   		
+    $.each(list, function (i, item) {
+        aa = [];
+        aa[0] = item.name;
+        aa[1] = parseInt(item.monthVal);
+        myLineDate[j] = aa;
+        j++;
+    });
+    lineChart.addSeries({
+        name: '客户分析',
+        data: myLineDate,
+        dataLabels: {
+            enabled: false
+        }
+    })
+}
+
+window.onload = myfun;
+</script>
+</body>
+</html>

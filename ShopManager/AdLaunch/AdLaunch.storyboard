@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qiW-4T-PLu">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Ad View Controller-->
+        <scene sceneID="Usc-EQ-Cga">
+            <objects>
+                <viewController id="igP-au-iAp" customClass="AdViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EeV-sA-vWd"/>
+                        <viewControllerLayoutGuide type="bottom" id="EQ7-Zm-EFb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SSl-RY-0jY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Lt-5c-f8z">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="igP-au-iAp" id="Jb2-Qi-cRx"/>
+                                </connections>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSr-IS-dPZ">
+                                <rect key="frame" x="275" y="20" width="80" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5946473817567568" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="MEu-yC-FDT"/>
+                                    <constraint firstAttribute="width" constant="80" id="cEB-6D-oUa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="3秒后跳过">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="skipButtonDidTouch:" destination="igP-au-iAp" eventType="touchUpInside" id="6No-4N-4mg"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="UYO-cJ-dzJ">
+                                <rect key="frame" x="168" y="610" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.72549019609999998" green="0.72549019609999998" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.98431372549999996" green="0.25882352939999997" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EQ7-Zm-EFb" firstAttribute="top" secondItem="UYO-cJ-dzJ" secondAttribute="bottom" constant="20" id="2IF-aK-v9A"/>
+                            <constraint firstItem="8Lt-5c-f8z" firstAttribute="top" secondItem="EeV-sA-vWd" secondAttribute="bottom" id="3CK-44-7EK"/>
+                            <constraint firstItem="SSr-IS-dPZ" firstAttribute="top" secondItem="EeV-sA-vWd" secondAttribute="bottom" constant="20" id="FDw-nK-ide"/>
+                            <constraint firstItem="UYO-cJ-dzJ" firstAttribute="centerX" secondItem="SSl-RY-0jY" secondAttribute="centerX" id="PCa-hq-Sqe"/>
+                            <constraint firstAttribute="trailing" secondItem="SSr-IS-dPZ" secondAttribute="trailing" constant="20" id="RN3-3I-UUx"/>
+                            <constraint firstItem="8Lt-5c-f8z" firstAttribute="leading" secondItem="SSl-RY-0jY" secondAttribute="leading" id="dh7-Y2-BbS"/>
+                            <constraint firstItem="EQ7-Zm-EFb" firstAttribute="top" secondItem="8Lt-5c-f8z" secondAttribute="bottom" id="onI-WB-XwT"/>
+                            <constraint firstAttribute="trailing" secondItem="8Lt-5c-f8z" secondAttribute="trailing" id="rAQ-MF-wGy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="drR-re-Q6e"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="containerView" destination="8Lt-5c-f8z" id="zl3-21-exX"/>
+                        <outlet property="pageControl" destination="UYO-cJ-dzJ" id="nzj-tu-e5h"/>
+                        <outlet property="skipButton" destination="SSr-IS-dPZ" id="whE-p3-LIC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hxL-L6-88W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1207.5" y="1.5"/>
+        </scene>
+        <!--Ad Detail View Controller-->
+        <scene sceneID="FMa-kh-KpM">
+            <objects>
+                <viewController storyboardIdentifier="AdDetailVC" automaticallyAdjustsScrollViewInsets="NO" id="dbJ-H2-gSI" customClass="AdDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zYa-xo-Q0F"/>
+                        <viewControllerLayoutGuide type="bottom" id="gW8-ZK-NNO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vId-3u-9cc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p5L-MF-GFy">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="dbJ-H2-gSI" id="Tn4-jL-d0V"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="p5L-MF-GFy" secondAttribute="trailing" id="8Zj-lC-FOc"/>
+                            <constraint firstItem="p5L-MF-GFy" firstAttribute="top" secondItem="zYa-xo-Q0F" secondAttribute="bottom" id="YG6-lk-tu4"/>
+                            <constraint firstItem="gW8-ZK-NNO" firstAttribute="top" secondItem="p5L-MF-GFy" secondAttribute="bottom" id="d0e-9G-GyU"/>
+                            <constraint firstItem="p5L-MF-GFy" firstAttribute="leading" secondItem="vId-3u-9cc" secondAttribute="leading" id="yf2-zo-fzM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bm8-uo-B8T">
+                        <barButtonItem key="leftBarButtonItem" image="fanhui" id="r7U-uf-doI">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="backButtonDidTouch:" destination="dbJ-H2-gSI" id="j1m-v5-zVF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="webView" destination="p5L-MF-GFy" id="rnE-rP-j6x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="grk-n2-H0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1692.5" y="1.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0dE-QA-Ghv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qiW-4T-PLu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Prx-QY-9Lz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="igP-au-iAp" kind="relationship" relationship="rootViewController" id="29g-U0-Lg5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4aP-rY-tV1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="761" y="2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="fanhui" width="9" height="16"/>
+    </resources>
+</document>

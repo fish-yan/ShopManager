@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StoreBoardHeaderView">
+            <connections>
+                <outlet property="nameL" destination="tAC-lI-OTA" id="fQj-VY-Thp"/>
+                <outlet property="timeL" destination="LD5-r9-LFg" id="kUR-KL-zNT"/>
+                <outlet property="webView" destination="CDu-F0-JCZ" id="guC-IK-ExH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="siO-Q9-EBL">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAC-lI-OTA">
+                            <rect key="frame" x="166" y="10" width="44" height="22"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zi1-4b-Nvw">
+                            <rect key="frame" x="138" y="34" width="100" height="16"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LD5-r9-LFg">
+                                    <rect key="frame" x="67" y="0.0" width="33" height="16"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" red="0.8862745098" green="0.14901960780000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时间范围：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ky8-ZF-0Wx">
+                                    <rect key="frame" x="0.0" y="0.0" width="67" height="16"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="LD5-r9-LFg" firstAttribute="leading" secondItem="Ky8-ZF-0Wx" secondAttribute="trailing" id="8Ff-Wu-eGY"/>
+                                <constraint firstAttribute="bottom" secondItem="LD5-r9-LFg" secondAttribute="bottom" id="BC5-Rx-yPm"/>
+                                <constraint firstItem="LD5-r9-LFg" firstAttribute="top" secondItem="Zi1-4b-Nvw" secondAttribute="top" id="HxL-vg-Nym"/>
+                                <constraint firstAttribute="trailing" secondItem="LD5-r9-LFg" secondAttribute="trailing" id="T6c-iU-RgR"/>
+                                <constraint firstItem="Ky8-ZF-0Wx" firstAttribute="leading" secondItem="Zi1-4b-Nvw" secondAttribute="leading" id="cW9-q5-ZoM"/>
+                                <constraint firstItem="Ky8-ZF-0Wx" firstAttribute="top" secondItem="Zi1-4b-Nvw" secondAttribute="top" id="mgd-vt-RJI"/>
+                                <constraint firstAttribute="bottom" secondItem="Ky8-ZF-0Wx" secondAttribute="bottom" id="nlQ-Dr-m25"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.95686274509803915" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="tAC-lI-OTA" firstAttribute="centerX" secondItem="siO-Q9-EBL" secondAttribute="centerX" id="FWJ-MR-2dy"/>
+                        <constraint firstAttribute="height" constant="60" id="Nuq-3b-UkR"/>
+                        <constraint firstItem="tAC-lI-OTA" firstAttribute="top" secondItem="siO-Q9-EBL" secondAttribute="top" constant="10" id="bhJ-aF-RBk"/>
+                        <constraint firstAttribute="bottom" secondItem="Zi1-4b-Nvw" secondAttribute="bottom" constant="10" id="lIT-jh-rxu"/>
+                        <constraint firstItem="Zi1-4b-Nvw" firstAttribute="centerX" secondItem="siO-Q9-EBL" secondAttribute="centerX" id="wdl-Ja-hKc"/>
+                    </constraints>
+                </view>
+                <webView alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CDu-F0-JCZ">
+                    <rect key="frame" x="0.0" y="60" width="375" height="240"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="5Qd-rX-ZNB"/>
+                    </connections>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" red="0.79607843140000001" green="0.22352941179999999" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="siO-Q9-EBL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="2im-z6-aLB"/>
+                <constraint firstAttribute="trailing" secondItem="CDu-F0-JCZ" secondAttribute="trailing" id="8Vy-wc-d01"/>
+                <constraint firstItem="siO-Q9-EBL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="8wf-Ga-mXt"/>
+                <constraint firstAttribute="trailing" secondItem="siO-Q9-EBL" secondAttribute="trailing" id="LyT-cF-rMZ"/>
+                <constraint firstItem="CDu-F0-JCZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="h4e-oJ-9IY"/>
+                <constraint firstAttribute="bottom" secondItem="CDu-F0-JCZ" secondAttribute="bottom" id="nXD-Pi-h3Q"/>
+                <constraint firstItem="CDu-F0-JCZ" firstAttribute="top" secondItem="siO-Q9-EBL" secondAttribute="bottom" id="qkO-JD-uU0"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-31" y="68"/>
+        </view>
+    </objects>
+</document>

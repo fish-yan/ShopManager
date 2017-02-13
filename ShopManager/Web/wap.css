@@ -1,0 +1,233 @@
+/*!
+ * CjmAppStyle v1.0 (http://www.cjm18.com)
+ * Copyright 2015-2016 CPAU, Inc.
+ */
+
+/*----------------------------------------------------------------
+ *基础样式
+----------------------------------------------------------------*/
+html {
+	height: 100%;
+	width: 100%;
+	font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
+	overflow: hidden;
+	outline: 0;
+	-webkit-text-size-adjust:none;
+}
+body {
+	height: 100%;
+	margin: 0;
+	font-size:0.6rem;
+	overflow-x: hidden;
+	-webkit-user-select: none;
+	position: relative;
+	background:#f1f1f1;
+}
+.white{ background-color: #fff;}
+samp {
+    font-family: Monaco, Menlo, Consolas, "Courier New", "FontAwesome", monospace;
+    font-size: 1rem;
+}
+a:hover,
+a:focus {
+    text-decoration: none;}
+
+
+
+
+/* ==================================================================*/
+
+
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}
+del,ins{text-decoration:none;}
+li{list-style:none;}
+caption,th{ text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:baseline;}
+sub{vertical-align:baseline;}
+legend{color:#000;}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}
+.left{float:left;}
+.right{float:right;}
+.center{ margin:0 auto;}
+.input-styl1{ width:100%; height:1.6rem; line-height:1.6rem; border:1px #F9F9F9 solid;}
+.btn1{ height:1.5rem; line-height:1.5rem; text-align:center; margin:0 auto; width:90%; border:none; background:#e74539; margin-top:0.5rem; margin-bottom:0.5rem; border-radius:3px; color:#fff;}
+
+
+.header{ font-size:0.8rem; height:2.8rem; line-height:2.8rem; background:#e74539; color:#fff; text-align:center; position:relative;}
+.header-back{ position:absolute; top:0; left:0.5rem; height:2.8rem; line-height:2.8rem; display:block;}
+.header-more{ position:absolute; top:0; right:0.5rem; height:2.8rem; line-height:2.8rem; display:block;}
+.header > img{vertical-align:middle; height:1.5rem;}
+.header > span > img{vertical-align:middle; height:1.5rem; }
+
+.pop-menu, .pop-menu1{ background:#fff; position:absolute; top:2.8rem; left:0; width:100%; display:none; z-index:9; overflow:hidden;}
+.pop-menu ul li, .pop-menu1 ul li{ height:2rem; line-height:2rem; text-align:center; color:#000; font-size:0.8rem; border-bottom:1px #f4f4f4 solid;}
+.pop-menu2{ background:#f1f1f1; position:absolute; top:2.8rem; left:0; width:100%; display:none; z-index:9; overflow:auto; max-height:22rem;}
+.pop-menu2 > ul{ margin-bottom:0.5rem;}
+
+
+
+
+.graphics{ background:#ffffff; height:100%;}
+.graphics-wsq{ background-size:cover; height:10rem; border-bottom:1px #D4D4D4 solid;}
+.graphics-wsq > img{ height:100%;}
+
+.row-1{ overflow:hidden; background:#fff; margin-bottom:0.5rem;}
+.row-1 ul li{ width:25%; height:3.5rem; line-height:3.5rem; float:left; font-size:1.4rem; margin:0.8rem 0;}
+.row-1 ul li > span{ width:2.2rem; height:2.2rem; text-align:center; margin:0 auto; display:block;}
+.row-1 ul li > span > img{ width:100%;}
+.row-1 ul li > p{ text-align:center; height:0.9rem; line-height:0.9rem; margin-top:0.25rem;}
+.row-1 ul li > p{font-size:0.6rem; color:#000;}
+
+.container{overflow:hidden; }
+.list-c{background:#fff;}
+.list-c li{ width:7.65rem; height:3rem; display:inline-block; margin-right:-3px; border-bottom:1px #f1f1f1 solid; border-right:1px #f1f1f1 solid; padding:0.8rem 0 0 0.3rem;}
+.list-c li > img{ display:inline-block; width:2.4rem; height:2.4rem; vertical-align:middle;}
+.list-c li > div{ display:inline-block; width:5rem; vertical-align:middle;}
+.list-c li > div p{ font-size:0.6rem;}
+.list-c li > div p > b{ font-size:0.8rem;}
+
+
+.personal-head{ background:url(../../images/crmDzApp/personal-bg.jpg) no-repeat; background-size:cover; height:8rem; text-align:center;}
+.personal-head img{ width:5rem; height:5rem; margin:1rem 0 0 0;}
+.personal-head p{ color:#fff;}
+.list1{ overflow:hidden;}
+.list1 dt, .list1 dd{ height:2.1rem; line-height:2.1rem; border-bottom:1px #EAEAEA solid; float:left;  background:#fff;}
+.list1 dt{ width:17%; padding-left:4%;}
+.list1 dd{ width:75%; padding-right:4%;}
+
+.list2 > li{border-bottom:1px #EAEAEA solid; position:relative; background:#fff;}
+.list2 > li .c1{ height:2.1rem; line-height:2.1rem;}
+.list2 > li span{ display:inline-block; height:2.1rem; line-height:2.1rem;}
+.list2 > li span.s-txt{ margin-left:0.6rem;}
+.list2 > li span.s-num{ float:right; margin:0 0.3rem;}
+.list2 > li span.s-t1{ margin-left:0.6rem; width:4rem;}
+.list2 > li span.s-t2{ width:10.5rem;}
+.list2 > li span.s-dg{ float:right; margin:0 0.3rem; background:url(../../images/crmDzApp/btn-dg.png) no-repeat center 0; background-size:cover; width:2rem; height:2rem;}
+.s-dg-act{ background-position:center -2rem !important;}
+.arrow-d{ float:right; margin:0.3rem 0.3rem 0 0; width:1.6rem; height:1.6rem;}
+.list2-sub{border-bottom:1px #EAEAEA solid; background:#f8f8f8; width:100%; display:none;}
+.list2-sub > p{ height:1.4rem; line-height:1.4rem; position:relative;}
+.list2-sub > p > span, .list2 li > p > b, .list2 li > p > em{ height:1.4rem; line-height:1.4rem; display:inline-block;}
+.list2-sub > p > span{ position:absolute; top:0; left:1.6rem;}
+.list2-sub > p > b{ position:absolute; top:0; right:5rem; font-weight:normal;}
+.list2-sub > p > em{ position:absolute; top:0; right:0.6rem;}
+.list2-sub-title{ background:#e7e7e7; padding-left:0.2rem;}
+.content{ display:none;}
+
+.list3{ background:#fff;}
+.list3 li{ height:2.1rem; line-height:2.1rem; border-bottom:1px #EAEAEA solid; position:relative;}
+.list3 li span{ display:inline-block; height:2.1rem; line-height:2.1rem;}
+.list3 li span.s-txt{ margin-left:0.6rem;}
+.list3 li span.s-num{float:right; margin:0 0.3rem;}
+
+.list4{}
+.list4 > li{border-bottom:1px #EAEAEA solid; position:relative; background:#fff; overflow:hidden; padding:0.2rem;}
+.list4 > li .c2{ float:left; position:relative; width:10.3rem;}
+.list4 > li .c3{ float:left; position:relative; width:100%;}
+.list4 > li p.list4-title{ height:2rem; line-height:1rem; font-size:0.7rem; overflow:hidden; margin-bottom:0.4rem;}
+.list4 > li p.list4-ot{ color:#999;}
+.list4 > li span.s-txt{ margin-left:0.6rem;}
+.list4 > li span.s-view{ float:right; margin:0 0.3rem; }
+.list4 > li span.s-view > img{ width:1rem; vertical-align:text-top;}
+.list4 > li .list4-img{ width:5rem; height:3.4rem; display:inline-block; float:left; margin-right:0.2rem; overflow:hidden;}
+.list4 > li .list4-img img{ width:100%;}
+
+
+.tab1{ background:#fff; overflow:hidden; border-bottom:1px #e74539 solid;}
+.tab1 li{ float:left; width:50%;height:2.1rem; line-height:2.1rem; text-align:center;}
+.tab1 li.tab1-act{ border-bottom:2px #e74539 solid;}
+
+.xjpd li{ margin-bottom:0.5rem;}
+.xjpd-s ul{letter-spacing:0;word-spacing:0;font-size:0;}
+.xjpd-s ul li{ letter-spacing:normal;word-spacing:normal;font-size:0.6rem; display:inline-block; width:20%; padding:0.3rem 0; color:#999;}
+.xjpd-s ul li > img{ width:1rem; height:1rem; vertical-align:middle; margin:0 0.2rem;}
+
+.xjpd-list ul li{ float:left; border-bottom:1px #f1f1f1 solid; border-right:1px #f1f1f1 solid; width:33%; height:5.28rem; background:#fff url(../../images/crmDzApp/xjpd-bg.png) no-repeat center center; background-size:70%;}
+.xjpd-list ul li > p{ text-align:center;}
+.xjpd-list ul li > .xjpd-list-num{ font-size:0.8rem;}
+.xjpd-list ul li > .xjpd-list-dw{ font-size:0.5rem; color:#414141; line-height:0.5rem;}
+.xjpd-list ul li > .xjpd-list-star{ width:2.8rem; height:0.5rem; background:url(../../images/crmDzApp/star-a1.png) no-repeat; background-size:cover; margin:0 auto; margin-top:1.5rem;}
+.xjpd-list ul li > .xjpd-list-star > span{ display:block; height:0.5rem; background:url(../../images/crmDzApp/star-a2.png) no-repeat; background-size:cover;}
+.star5{ width:2.8rem;}
+.star4a{ width:2.55rem;}
+.star4{ width:2.3rem;}
+.star3a{ width:2rem;}
+.star3{ width:1.7rem;}
+.star2a{ width:1.45rem;}
+.star2{ width:1.1rem;}
+.star1a{ width:0.9rem;}
+.star1{ width:0.5rem;}
+.star0a{ width:0.3rem;}
+.star0{ width:0;}
+
+
+
+.wsq-detail-title{ background:#f1f1f1; border-bottom:1px #D4D4D4 solid;}
+.wsq-detail-txt{ font-size:0.8rem;text-align:center; margin:0.2rem 0; line-height:1rem;}
+.wsq-detail-time{ font-size:0.5rem; color:#999; text-align:center;}
+.detail-content{ padding:0.5rem; background:#fff;}
+.detail-content > img{ width:100%;}
+.detail-content > p{ line-height:1rem; text-indent:1.1rem; margin-bottom:0.5rem;}
+.detail-comment-title{ height:1rem; line-height:1rem; background:#f1f1f1; border-bottom:1px #cbcbcb solid; border-top:1px #cbcbcb solid; text-indent:0.5rem;}
+.detail-comment-list li{ background:#fff; border-bottom:1px #f1f1f1 solid; padding:0 0.5rem;}
+.detail-comment-list li > div{height:1.6rem; line-height:1.6rem; margin-bottom:0.4rem; color:#999;}
+.detail-comment-list li > div > img{ width:1.4rem; vertical-align:middle; margin-right:0.2rem;}
+.detail-comment-list li > div > span{ float:right; height:1.6rem; line-height:1.6rem;}
+.detail-comment-list li > p{ margin-bottom:0.5rem;}
+.reply{ background:#f1f1f1;  position:fixed; bottom:0; left:0; width:100%; padding:0.3rem 0.5rem; border-top:1px #cbcbcb solid;}
+.reply input[type="text"]{ width:11.7rem; height:1.2rem; line-height:1.2rem; border:none; margin-right:0.3rem;}
+.btn-send{ width:3rem; height:1.2rem; line-height:1.2rem; border:none; background:#e74539; color:#fff; text-align:center; display:inline-block;}
+.blank{ height:1.7rem;}
+
+
+.graph-txt{ position:absolute; top:0; left:0; z-index:6; width:100%;text-shadow:1px 0 0 #000,-1px 0 0 #000,0 1px 0 #000,0 -1px 0 #000;}
+.lt{ position:absolute; top:0.2rem; left:0.2rem; z-index:7; width:7rem; color:#FFF;}
+.lb{ position:absolute; top:9rem; left:0.2rem; z-index:7; width:7rem; color:#FFF;}
+.rt{ position:absolute; top:0.2rem; right:0.2rem; z-index:7; width:7rem; text-align:right; color:#FFF;}
+.rb{ position:absolute; top:9rem; right:0.2rem; z-index:7; width:7rem; text-align:right; color:#FFF;}
+
+.pictures{
+    position: relative;
+	width:100%;
+	height:auto;
+	max-height:414px;
+	max-height:320px\9;
+}
+.pictures img{
+	width:100%;
+	height:9rem;
+}
+.pictures .swiper-pagination{
+  position: absolute;
+  left:0;
+  text-align: center;
+  bottom:5px;
+  bottom:15px\9;
+  width: 100%;
+}
+.pictures .swiper-pagination-switch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: #bbb;
+  margin: 0 3px;
+  cursor: pointer;
+}
+.pictures .swiper-pagination-bullet{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  margin: 0 3px;
+  cursor: pointer;
+}
+
+.investment{ background:url(../../images/crmDzApp/investment.png) center 35% no-repeat; background-size:75%; width:100%; height:100%;}

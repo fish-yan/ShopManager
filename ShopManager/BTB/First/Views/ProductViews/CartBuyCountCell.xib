@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CartBuyCountCell" rowHeight="50" id="okX-5j-tFx" customClass="CartBuyCountCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="okX-5j-tFx" id="pcl-iV-av8">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="购买数量" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgE-9C-rjL">
+                        <rect key="frame" x="10" y="16" width="56" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTr-VP-Vku">
+                        <rect key="frame" x="284" y="12" width="26" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="26" id="12u-Nw-lmb"/>
+                            <constraint firstAttribute="height" constant="26" id="M0s-fw-0Cc"/>
+                        </constraints>
+                        <state key="normal" image="add"/>
+                        <connections>
+                            <action selector="addButtonAction:" destination="okX-5j-tFx" eventType="touchUpInside" id="T8g-5e-tK4"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zr-AD-WeX">
+                        <rect key="frame" x="233" y="12" width="26" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="26" id="EUq-Af-xsT"/>
+                            <constraint firstAttribute="height" constant="26" id="puw-YY-ey6"/>
+                        </constraints>
+                        <state key="normal" image="minus"/>
+                        <connections>
+                            <action selector="minusButtonAction:" destination="okX-5j-tFx" eventType="touchUpInside" id="Q5I-Gt-bjJ"/>
+                        </connections>
+                    </button>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" textAlignment="center" minimumFontSize="17" background="数字框" translatesAutoresizingMaskIntoConstraints="NO" id="99s-sz-BSV">
+                        <rect key="frame" x="259" y="12" width="25" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="26" id="Ip8-5f-SXt"/>
+                            <constraint firstAttribute="width" constant="25" id="mQD-HB-2CL"/>
+                        </constraints>
+                        <color key="textColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="nTr-VP-Vku" secondAttribute="trailing" constant="10" id="3hN-eO-a5R"/>
+                    <constraint firstItem="99s-sz-BSV" firstAttribute="centerY" secondItem="nTr-VP-Vku" secondAttribute="centerY" id="DHR-ug-vUX"/>
+                    <constraint firstItem="cgE-9C-rjL" firstAttribute="leading" secondItem="pcl-iV-av8" secondAttribute="leading" constant="10" id="FvZ-35-TDc"/>
+                    <constraint firstItem="99s-sz-BSV" firstAttribute="leading" secondItem="8Zr-AD-WeX" secondAttribute="trailing" id="Qdl-v9-qob"/>
+                    <constraint firstItem="nTr-VP-Vku" firstAttribute="leading" secondItem="99s-sz-BSV" secondAttribute="trailing" id="hEZ-EP-0eW"/>
+                    <constraint firstItem="cgE-9C-rjL" firstAttribute="centerY" secondItem="pcl-iV-av8" secondAttribute="centerY" id="i5T-mL-Afl"/>
+                    <constraint firstItem="nTr-VP-Vku" firstAttribute="centerY" secondItem="pcl-iV-av8" secondAttribute="centerY" id="pM9-y4-abe"/>
+                    <constraint firstItem="8Zr-AD-WeX" firstAttribute="centerY" secondItem="99s-sz-BSV" secondAttribute="centerY" id="tOh-r7-eJq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="addButton" destination="nTr-VP-Vku" id="IoF-mG-Q5E"/>
+                <outlet property="countTF" destination="99s-sz-BSV" id="M4U-iu-iwf"/>
+                <outlet property="minusButton" destination="8Zr-AD-WeX" id="PsV-tT-tKF"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="add" width="34" height="34"/>
+        <image name="minus" width="34" height="34"/>
+        <image name="数字框" width="25" height="26"/>
+    </resources>
+</document>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KZPickerView">
+            <connections>
+                <outlet property="cancelButton" destination="w65-SC-78J" id="Qad-8t-Nay"/>
+                <outlet property="confirmButton" destination="Lfc-m4-2BK" id="MjU-Lb-ehx"/>
+                <outlet property="pickerView" destination="bjm-UQ-kqs" id="gyo-zs-ALQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w65-SC-78J">
+                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="uPg-vt-uH3"/>
+                    </constraints>
+                    <state key="normal" title="取消"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lfc-m4-2BK">
+                    <rect key="frame" x="187.5" y="0.0" width="187.5" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="gu0-Hs-Ryk"/>
+                    </constraints>
+                    <state key="normal" title="确认"/>
+                </button>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjm-UQ-kqs">
+                    <rect key="frame" x="0.0" y="44" width="375" height="206"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Yjv-QR-ihL"/>
+                        <outlet property="delegate" destination="-1" id="eXd-9x-2F1"/>
+                    </connections>
+                </pickerView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Lfc-m4-2BK" firstAttribute="leading" secondItem="w65-SC-78J" secondAttribute="trailing" id="8dD-FS-VYD"/>
+                <constraint firstItem="w65-SC-78J" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9Lt-Ry-wpf"/>
+                <constraint firstItem="Lfc-m4-2BK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="EIr-l6-E0D"/>
+                <constraint firstAttribute="bottom" secondItem="bjm-UQ-kqs" secondAttribute="bottom" id="Tsx-1D-CjW"/>
+                <constraint firstItem="w65-SC-78J" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="b3s-Zp-BbP"/>
+                <constraint firstAttribute="trailing" secondItem="Lfc-m4-2BK" secondAttribute="trailing" id="c3v-Rh-nUi"/>
+                <constraint firstAttribute="trailing" secondItem="bjm-UQ-kqs" secondAttribute="trailing" id="cVo-s9-H9y"/>
+                <constraint firstItem="bjm-UQ-kqs" firstAttribute="top" secondItem="Lfc-m4-2BK" secondAttribute="bottom" id="mcc-KY-WfL"/>
+                <constraint firstItem="bjm-UQ-kqs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="t4i-gc-wYK"/>
+                <constraint firstItem="Lfc-m4-2BK" firstAttribute="width" secondItem="w65-SC-78J" secondAttribute="width" id="wr6-5V-qbu"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

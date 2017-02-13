@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ClientBoardHeaderView">
+            <connections>
+                <outlet property="nameL" destination="cnX-JB-j0G" id="VLG-aK-6x4"/>
+                <outlet property="webView" destination="Jud-t7-DJu" id="0lJ-6x-wn7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="417"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jud-t7-DJu">
+                    <rect key="frame" x="0.0" y="44" width="375" height="373"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="ZZQ-Yk-plt"/>
+                    </connections>
+                </webView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QlW-PT-6hG">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnX-JB-j0G">
+                            <rect key="frame" x="166" y="11" width="44" height="22"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.95686274510000002" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="DBP-4n-0lB"/>
+                        <constraint firstItem="cnX-JB-j0G" firstAttribute="centerX" secondItem="QlW-PT-6hG" secondAttribute="centerX" id="I8I-jR-1D6"/>
+                        <constraint firstItem="cnX-JB-j0G" firstAttribute="centerY" secondItem="QlW-PT-6hG" secondAttribute="centerY" id="cVg-9I-RtJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.79607843140000001" green="0.22352941179999999" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="QlW-PT-6hG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="NHV-nv-3y8"/>
+                <constraint firstItem="Jud-t7-DJu" firstAttribute="top" secondItem="QlW-PT-6hG" secondAttribute="bottom" id="Wrt-de-sUv"/>
+                <constraint firstItem="Jud-t7-DJu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pbK-Zs-nXQ"/>
+                <constraint firstAttribute="bottom" secondItem="Jud-t7-DJu" secondAttribute="bottom" id="pd7-um-qRv"/>
+                <constraint firstItem="QlW-PT-6hG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qwJ-II-W63"/>
+                <constraint firstAttribute="trailing" secondItem="Jud-t7-DJu" secondAttribute="trailing" id="y0O-gR-DtC"/>
+                <constraint firstAttribute="trailing" secondItem="QlW-PT-6hG" secondAttribute="trailing" id="ylz-93-wEg"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="72.5" y="179.5"/>
+        </view>
+    </objects>
+</document>

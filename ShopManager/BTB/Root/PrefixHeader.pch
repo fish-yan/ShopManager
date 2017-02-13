@@ -1,0 +1,55 @@
+//
+//  PrefixHeader.pch
+//  BTB
+//
+//  Created by 薛焱 on 16/2/3.
+//  Copyright © 2016年 薛焱. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <MJRefresh.h>
+#import <UIImageView+WebCache.h>
+#import "DataHelper.h"
+
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+
+//常量管理
+#define priceDCell @"priceDCell"
+#define itemOCell @"itemOCell"
+#define orderACell @"orderACell"
+#define receivCell @"receivCell"
+#define orderMCell @"orderMCell"
+#define totalPCell @"totalPCell"
+#define leaveMCell @"leaveMCell"
+#define supplierNCell @"supplierNCell"
+#define promotionCell @"promotionCell"
+#define couponCell @"couponCell"
+#define pointtocashCell @"pointtocashCell"
+
+#define ReadyPay @"待付款"
+#define ReadyRecev @"待收货"
+#define ReadySend @"待发货"
+#define ReadyCheck @"待审核"
+#define AllOrder @"全部"
+#define ReadyCancel @"取消/退货"
+#define ReadyEvaluate @"待评价"
+
+//API
+#define kRequestHeader @"http://btb.cjm168.com" //前缀
+#define kCategory @"/btb/commCategory.do" //商品类目
+#define kHotComm @"/btb/hotComm.do" //热门商品
+#define kRecommend @"/btb/recommendComm.do" //推荐商品
+#define kSearach @"/btb/CommSearch.do" //搜索商品列表
+#define kCarType @"/btb/carTypeOrSeries.do" //车型车系
+
+
+
+#endif /* PrefixHeader_pch */

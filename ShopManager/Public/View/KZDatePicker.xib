@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KZDatePicker">
+            <connections>
+                <outlet property="cancelButton" destination="l4g-gq-xeT" id="YkR-Ng-ZtA"/>
+                <outlet property="confirmButton" destination="rFF-sD-Nck" id="WzO-1F-tA7"/>
+                <outlet property="datePicker" destination="uGY-46-Eel" id="DMt-Oe-QSx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4g-gq-xeT">
+                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="WuW-aX-hTo"/>
+                    </constraints>
+                    <state key="normal" title="取消"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFF-sD-Nck">
+                    <rect key="frame" x="187.5" y="0.0" width="187.5" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="GUA-gb-V8C"/>
+                    </constraints>
+                    <state key="normal" title="确认"/>
+                </button>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="uGY-46-Eel">
+                    <rect key="frame" x="0.0" y="44" width="375" height="206"/>
+                    <date key="date" timeIntervalSinceReferenceDate="499851446.38668501">
+                        <!--2016-11-03 07:37:26 +0000-->
+                    </date>
+                </datePicker>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rFF-sD-Nck" firstAttribute="leading" secondItem="l4g-gq-xeT" secondAttribute="trailing" id="9jZ-vu-nAm"/>
+                <constraint firstItem="l4g-gq-xeT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="FUN-0k-NhB"/>
+                <constraint firstAttribute="trailing" secondItem="uGY-46-Eel" secondAttribute="trailing" id="ReK-hQ-0H0"/>
+                <constraint firstItem="uGY-46-Eel" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UKj-La-C8j"/>
+                <constraint firstItem="l4g-gq-xeT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bad-69-oRx"/>
+                <constraint firstItem="rFF-sD-Nck" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="g7b-yJ-tjB"/>
+                <constraint firstAttribute="trailing" secondItem="rFF-sD-Nck" secondAttribute="trailing" id="j36-0Y-gDb"/>
+                <constraint firstAttribute="bottom" secondItem="uGY-46-Eel" secondAttribute="bottom" id="qRp-H9-774"/>
+                <constraint firstItem="uGY-46-Eel" firstAttribute="top" secondItem="rFF-sD-Nck" secondAttribute="bottom" id="wIz-Qv-yhP"/>
+                <constraint firstItem="rFF-sD-Nck" firstAttribute="width" secondItem="l4g-gq-xeT" secondAttribute="width" id="xar-C1-bUK"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="34.5" y="239.5"/>
+        </view>
+    </objects>
+</document>

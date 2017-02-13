@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="PriceDetailTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合计金额" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYg-TS-lO6">
+                        <rect key="frame" x="10" y="0.0" width="52" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1X9-Kn-OOO">
+                        <rect key="frame" x="282" y="0.0" width="28" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.92941176470588238" green="0.24705882352941178" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HTm-Ng-Xam">
+                        <rect key="frame" x="10" y="33" width="310" height="1"/>
+                        <color key="backgroundColor" red="0.85882352939999995" green="0.85882352939999995" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="2PU-8G-8BG"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="HTm-Ng-Xam" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="3yv-YM-P7o"/>
+                    <constraint firstItem="1X9-Kn-OOO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="7yH-Rx-QUc"/>
+                    <constraint firstItem="dYg-TS-lO6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="E8r-zI-EgR"/>
+                    <constraint firstAttribute="trailing" secondItem="1X9-Kn-OOO" secondAttribute="trailing" constant="10" id="Umd-mv-myL"/>
+                    <constraint firstAttribute="bottom" secondItem="dYg-TS-lO6" secondAttribute="bottom" id="ZaY-hg-8YP"/>
+                    <constraint firstItem="dYg-TS-lO6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="afg-qp-KnS"/>
+                    <constraint firstAttribute="trailing" secondItem="HTm-Ng-Xam" secondAttribute="trailing" id="awz-4F-f6j"/>
+                    <constraint firstAttribute="bottom" secondItem="1X9-Kn-OOO" secondAttribute="bottom" id="fP1-nN-M9J"/>
+                    <constraint firstAttribute="bottom" secondItem="HTm-Ng-Xam" secondAttribute="bottom" id="nfY-rt-x5I"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentL" destination="dYg-TS-lO6" id="Whu-mi-fnN"/>
+                <outlet property="lineV" destination="HTm-Ng-Xam" id="xn5-ae-PLS"/>
+                <outlet property="priceL" destination="1X9-Kn-OOO" id="kaG-kx-0Vs"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

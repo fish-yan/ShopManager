@@ -1,0 +1,109 @@
+//
+//  PrefixHeader.pch
+//  ShopManager
+//
+//  Created by 张旭 on 3/2/16.
+//  Copyright © 2016 Cjm. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+@import MBProgressHUD;
+#import <Toast/UIView+Toast.h>
+@import DateTools;
+@import IQKeyboardManager;
+
+//#define BASEURL         @"http://61.186.130.102:9080/api/"      //测试
+#define BASEURL         @"http://61.186.130.102:9086/api/"      //正式
+
+//#define CrmURL @"http://tcrm.cjm168.com/webservice/"	//测试
+#define CrmURL @"http://crm.cjm168.com/webservice/"		//正式
+
+#define DEVICECODE      @"DeviceCode"
+#define LOGINNAME       @"LoginName"
+#define LOGINPWD        @"LoginPwd"
+#define LOGINLIMIT      @"LoginLimit"
+#define DEVICETYPE      @"DeviceType"
+#define COMPANYID       @"CompanyId"
+#define STOREID         @"StoreId"
+#define POSITIONS       @"Positions"
+#define STARTDATE		@"StartDate"
+#define USERNAME        @"UserName"
+#define USERID          @"UserId"
+#define TOKEN           @"Token"
+#define USERTOKEN       @"UserToken"
+#define CODE            @"Code"
+#define RESULT          @"Result"
+#define MESSAGE         @"Message"
+#define STARTDATE       @"StartDate"
+#define ENDDATE         @"EndDate"
+#define CONSUMPTIONMONEY    @"ConsumptionMoney"
+#define CONSUMPTIONTIMES    @"ConsumptionTimes"
+#define ASKID               @"AskId"
+#define CONTENT             @"Content"
+
+#define Message		@"Message"
+
+//Error code
+#define ERROR_EMPTYUSERINFO     @"用户名和密码不可为空！"
+#define ERROR_NETWORK   @"网络连接失败！"
+
+
+#import "MJRefresh.h"
+#import "UIImageView+WebCache.h"
+#import "DataHelper.h"
+#import "AFNetWorking.h"
+#import "JDStatusBarNotification.h"
+#import <YYCache/YYCache.h>
+
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+
+//常量管理
+#define priceDCell @"priceDCell"
+#define itemOCell @"itemOCell"
+#define orderACell @"orderACell"
+#define receivCell @"receivCell"
+#define orderMCell @"orderMCell"
+#define totalPCell @"totalPCell"
+#define leaveMCell @"leaveMCell"
+#define supplierNCell @"supplierNCell"
+#define promotionCell @"promotionCell"
+#define couponCell @"couponCell"
+#define pointtocashCell @"pointtocashCell"
+
+#define ReadyPay @"待付款"
+#define ReadyRecev @"待收货"
+#define ReadySend @"待发货"
+#define ReadyCheck @"待审核"
+#define AllOrder @"全部"
+#define ReadyCancel @"取消/退货"
+#define ReadyEvaluate @"待评价"
+
+//API
+#define kRequestHeader @"http://btb.cjm168.com" //前缀
+#define kCategory @"/btb/commCategory.do" //商品类目
+#define kHotComm @"/btb/hotComm.do" //热门商品
+#define kRecommend @"/btb/recommendComm.do" //推荐商品
+#define kSearach @"/btb/CommSearch.do" //搜索商品列表
+#define kCarType @"/btb/carTypeOrSeries.do" //车型车系
+
+
+
+#pragma mark - NSLog宏
+// 以release模式编译的程序不会用NSLog输出，而以debug模式编译的程序将执行NSLog的全部功能。
+// release模式通常会定义 __OPTIMIZE__，debug模式不会
+#ifdef __OPTIMIZE__
+#define NSLog(...)      {}
+#else
+#define NSLog(...)      NSLog(__VA_ARGS__)
+#endif
+
+#endif /* PrefixHeader_pch */

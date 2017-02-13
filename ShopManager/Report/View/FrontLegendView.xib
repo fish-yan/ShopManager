@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FrontLegendView">
+            <connections>
+                <outlet property="circleView" destination="EMr-tV-S5W" id="frQ-dh-PZv"/>
+                <outlet property="monelyL" destination="0cT-Kg-gdC" id="mx0-hF-uOH"/>
+                <outlet property="titleL" destination="1a2-Ux-UXq" id="Dfw-ii-a3l"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="34"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商品零售" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1a2-Ux-UXq">
+                    <rect key="frame" x="26" y="0.0" width="58" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.63137254899999995" green="0.63137254899999995" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EMr-tV-S5W">
+                    <rect key="frame" x="0.0" y="8.5" width="17" height="17"/>
+                    <color key="backgroundColor" red="0.38431372549999998" green="0.58039215690000001" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="Cm7-gH-ofm"/>
+                        <constraint firstAttribute="width" constant="17" id="U93-GS-nf7"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cT-Kg-gdC">
+                    <rect key="frame" x="26" y="17" width="35.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="0cT-Kg-gdC" secondAttribute="bottom" id="13d-eG-clz"/>
+                <constraint firstItem="0cT-Kg-gdC" firstAttribute="leading" secondItem="1a2-Ux-UXq" secondAttribute="leading" id="Ilc-vG-atk"/>
+                <constraint firstItem="EMr-tV-S5W" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="QgT-wg-enh"/>
+                <constraint firstItem="EMr-tV-S5W" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Yqs-vt-sx3"/>
+                <constraint firstItem="1a2-Ux-UXq" firstAttribute="leading" secondItem="EMr-tV-S5W" secondAttribute="trailing" constant="9" id="bCX-u9-QeQ"/>
+                <constraint firstItem="1a2-Ux-UXq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qa7-Z4-bOs"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="33.5" y="363.5"/>
+        </view>
+    </objects>
+</document>

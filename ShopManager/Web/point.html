@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>星级评定</title>
+<link href="wap.css" rel="stylesheet">
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="highcharts.js"></script>
+<script type="text/javascript" src="wap.js"></script>
+</head>
+<body>
+    <div id="graphics" class="graphics" style="background:#371810;"></div>
+<script>
+	(function (doc, win) {
+	  var docEl = doc.documentElement,
+		resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		recalc = function () {
+		  var clientWidth = docEl.clientWidth;
+		  if (!clientWidth) return;
+		  docEl.style.fontSize = 20 * (clientWidth / 320).toFixed(2) + 'px';
+		};
+
+	  if (!doc.addEventListener) return;
+	  win.addEventListener(resizeEvt, recalc, false);
+	  doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+	
+	var lineChart;
+	var isloadChart = false;
+	
+	function initGraphics(){
+		var top = $("#graphics").height()/2 + 20;
+		var left = $(window).width()/2 + 10;
+		lineChart = new Highcharts.Chart({
+	        chart: {
+	        	renderTo: 'graphics',
+	            type: 'scatter',
+	            zoomType: 'none',
+	            plotBackgroundColor: '#371810',
+	            margin: [0, 0, 0, 0],
+	            reflow: true,
+	            alignTicks: false
+	        },
+	        title: {
+				text: ''
+	        },
+			credits: {
+				enabled: false
+			},
+			exporting: {
+	            enabled:false
+			},
+	        xAxis: {
+				min: 0,
+				max: 12,
+	            title: {
+	                enabled: false
+	            },
+				plotLines: [{
+					color: '#FFFFFF',  
+	                width: 0.5,
+					value: 6,
+					zIndex: 3
+				}],
+				labels: {
+					enabled: false
+				},
+				tickInterval: 1,
+				tickPixelInterval: 5,
+				gridLineColor: '#DA824F',//纵向网格线颜色
+				gridLineWidth: 0.5 //纵向网格线宽度
+	        },
+	        yAxis:{
+				min: 0,
+				max: 12000,
+	            title: {
+					enabled: false
+	            },
+				plotLines: [{
+					color: '#FFFFFF',  
+	                width: 0.5,
+					value: 6000,
+					zIndex: 3
+				}],
+				labels: {
+					enabled: false
+				},
+				tickInterval: 10,
+				tickPixelInterval: 5,
+				gridLineColor: '#DA824F',//横向网格线颜色
+				gridLineWidth: 0.5 //横向网格线宽度
+	        },
+	        legend: {
+				enabled: false,
+	            layout: 'vertical',
+	            align: 'left',
+	            verticalAlign: 'top',
+	            x: 100,
+	            y: 70,
+	            floating: true,
+	            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF',
+	            borderWidth: 1
+	        },
+	        plotOptions: {
+	            scatter: {
+	            	enableMouseTracking: false,
+	            	turboThreshold: 11000,//最多描点数，不设置默认1000
+	            	marker: {
+	                    radius: 2,
+	                    symbol: 'circle'
+	                }
+	            },
+	        },
+	        series: [{
+	            name: 'Customer',
+	            zIndex: 4,
+	            data: []
+	        }]
+	    });
+	}
+	
+	function clearData(){
+		var series=lineChart.series;            
+        while(series.length > 0) {
+			series[0].remove(false);
+        }
+        lineChart.redraw();
+        $(".lt").html("低频次高消费");
+		$(".lb").html("低频次低消费");
+		$(".rt").html("高频次高消费");
+		$(".rb").html("高频次低消费");
+	}
+	
+	function setData(dd, dg, gg, gd){
+		clearData();
+		var x;
+		var y;
+		var chartData = [];
+		$(".lt").html("低频次高消费:" + dg + "个");
+		$(".lb").html("低频次低消费:" + dd + "个");
+		$(".rt").html("高频次高消费:" + gg + "个");
+		$(".rb").html("高频次低消费:" + gd + "个");
+		var ddMarker = {fillColor: "#FF7800", radius: 2};
+		var dgMarker = {fillColor: "#FFD800", radius: 2};
+		var ggMarker = {fillColor: "#C2FF73", radius: 2};
+		var gdMarker = {fillColor: "#F70000", radius: 2};
+		var point = {};
+		for(var i = 0; i < (dd>2500?2500:dd); i++){
+			point = {};
+			point.y = Math.random()*-6000+6000;
+			point.x = x = Math.random()*-6+6;
+			point.marker = ddMarker;
+			chartData.push(point);
+		}
+		for(var i = 0; i < (dg>2500?2500:dg); i++){
+			point = {};
+			point.y = Math.random()*-6000+12000;
+			point.x = Math.random()*-6+6;
+			point.marker = dgMarker;
+			chartData.push(point);
+		}
+		for(var i = 0; i < (gd>2500?2500:gd); i++){
+			point = {};
+			point.y = Math.random()*-6000+6000;
+			point.x = Math.random()*-6+12;
+			point.marker = gdMarker;
+			chartData.push(point);
+		}
+		for(var i = 0; i < (gg>2500?2500:gg); i++){
+			point = {};
+			point.y = Math.random()*-6000+12000;
+			point.x = Math.random()*-6+12;
+			point.marker = ggMarker;
+			chartData.push(point);
+		}
+		lineChart.addSeries({                       
+			data: chartData
+        },false);
+		lineChart.redraw();
+	}
+	
+	window.onload=initGraphics;
+</script>
+</body>
+</html>

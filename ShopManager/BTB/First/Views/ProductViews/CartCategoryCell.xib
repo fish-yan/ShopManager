@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CartCategoryCell" rowHeight="150" id="16K-H0-hdq" customClass="CartCategoryCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="16K-H0-hdq" id="en5-gC-CX1">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="149"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择分类" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gof-X3-SOZ">
+                        <rect key="frame" x="10" y="10" width="60" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OuW-Ta-tNf">
+                        <rect key="frame" x="10" y="36" width="60" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="7xH-tE-fLW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="规格A">
+                            <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugj-it-5DU">
+                        <rect key="frame" x="10" y="75" width="90" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="90" id="0K3-VU-z0i"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="规格B: 套餐">
+                            <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dU-8Y-1jo">
+                        <rect key="frame" x="10" y="114" width="140" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="140" id="nZg-xQ-M86"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="规格C: 套餐(赠品)">
+                            <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ugj-it-5DU" firstAttribute="top" secondItem="OuW-Ta-tNf" secondAttribute="bottom" constant="10" id="70j-TU-mlP"/>
+                    <constraint firstItem="9dU-8Y-1jo" firstAttribute="leading" secondItem="en5-gC-CX1" secondAttribute="leading" constant="10" id="AN6-dE-Dzq"/>
+                    <constraint firstItem="OuW-Ta-tNf" firstAttribute="top" secondItem="gof-X3-SOZ" secondAttribute="bottom" constant="8" id="AeV-cr-dPH"/>
+                    <constraint firstItem="OuW-Ta-tNf" firstAttribute="leading" secondItem="en5-gC-CX1" secondAttribute="leading" constant="10" id="BqJ-JB-BGl"/>
+                    <constraint firstItem="gof-X3-SOZ" firstAttribute="top" secondItem="en5-gC-CX1" secondAttribute="top" constant="10" id="ME7-sC-V5W"/>
+                    <constraint firstItem="gof-X3-SOZ" firstAttribute="leading" secondItem="en5-gC-CX1" secondAttribute="leading" constant="10" id="NZS-Vx-kgH"/>
+                    <constraint firstItem="9dU-8Y-1jo" firstAttribute="top" secondItem="ugj-it-5DU" secondAttribute="bottom" constant="10" id="P9z-cC-B70"/>
+                    <constraint firstItem="ugj-it-5DU" firstAttribute="leading" secondItem="en5-gC-CX1" secondAttribute="leading" constant="10" id="xs9-nx-cnZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outletCollection property="categoryButtons" destination="OuW-Ta-tNf" id="5XY-hR-Ggb"/>
+                <outletCollection property="categoryButtons" destination="ugj-it-5DU" id="KQZ-6b-gU9"/>
+                <outletCollection property="categoryButtons" destination="9dU-8Y-1jo" id="HWO-rj-SuW"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

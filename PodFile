@@ -1,0 +1,20 @@
+platform :ios, '8.0'
+use_frameworks!
+
+target 'ShopManager' do
+pod 'AFNetworking'
+pod 'IQKeyboardManager'
+pod 'JDStatusBarNotification'
+pod 'MBProgressHUD'
+pod 'AVOSCloud'
+pod 'MJRefresh'
+pod 'DateTools'
+pod 'KNSemiModalViewController_hons82'
+pod 'FDStackView'
+pod 'YYCache'
+pod 'FlickerNumber'
+pod 'SDWebImage'
+pod 'Toast'
+pod 'Fabric'
+pod 'Crashlytics'
+end
